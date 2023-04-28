@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-Learning.NetIsFun-4ec0e3f2-313d-4008-9ab3-e9f6e60c59de</UserSecretsId>
+    <Configurations>Debug;Release;web.config</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

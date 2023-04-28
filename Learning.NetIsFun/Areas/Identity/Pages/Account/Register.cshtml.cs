@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using Learning.NetIsFun.Constants;
 using Learning.NetIsFun.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -133,6 +134,9 @@ namespace Learning.NetIsFun.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    // Assing role to user here
+                    await _userManager.AddToRoleAsync(user, Roles.User.ToString());
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
